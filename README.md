@@ -1,66 +1,41 @@
-## Foundry
+# Crowdfunding App
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A simple decentralized crowdfunding smart contract where users can fund using ETH and the owner can withdraw the total balance.
 
-Foundry consists of:
+## Features
 
-- **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
-- **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
-- **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
-- **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+* Users can contribute ETH to the contract
+* Tracks funds securely on-chain
+* Owner can withdraw the full collected amount
 
-## Documentation
+## Tech Stack
 
-https://book.getfoundry.sh/
+* Solidity
+* Foundry
 
-## Usage
+## Installation & Usage
 
-### Build
+```bash
+# Clone the repository
+git clone https://github.com/Koushikrawal22/crowdfunding-app.git
 
-```shell
-$ forge build
+# Navigate to project folder
+cd crowdfunding-app
+
+# Build the project
+forge build
+
+# Run tests
+forge test
 ```
 
-### Test
+## Project Structure
 
-```shell
-$ forge test
-```
+* `src/` → Smart contracts
+* `script/` → Deployment scripts
+* `test/` → Test files
 
-### Format
+## Author
 
-```shell
-$ forge fmt
-```
+* GitHub: https://github.com/Koushikrawal22
 
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
