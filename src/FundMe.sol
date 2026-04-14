@@ -43,7 +43,7 @@ contract FundMe {
     function cheapWithdraw() public onlyOwner {
         uint256 funderLength = s_funders.length;
         for (uint256 funderIndex = 0; funderIndex < funderLength; funderIndex++) {
-           address funder = s_funders[funderIndex];
+            address funder = s_funders[funderIndex];
             s_addressToAmountFunded[funder] = 0;
         }
         s_funders = new address[](0);
@@ -94,13 +94,12 @@ contract FundMe {
 
     function getFunder(uint256 index) external view returns (address) {
         return s_funders[index];
-    }   
-
-    function getOwner() external view returns (address){
-        return i_owner;
     }
 
- }
+    function getOwner() external view returns (address) {
+        return i_owner;
+    }
+}
 
 // Concepts we didn't cover yet (will cover in later sections)
 // 1. Enum
